@@ -1,0 +1,42 @@
+
+public class account_main {
+
+	public static void main(String[] args) {
+		
+		saving_account sobj=new saving_account(121, "vaish", 50000, "saving", 0.3f);
+		display(sobj);
+		
+		currents_account cobj =new currents_account(212,"vinit", 300000,"current", "oriflame");
+		display(cobj);
+		
+
+	}
+	
+	 public static void display(Accounts aobj)
+	 {
+		 System.out.println(" Account Name:"+aobj.getCust_name());
+		 System.out.println("Account number"+aobj.getAccount_number());
+		 System.out.println("Account balance"+aobj.getAccount_balance());
+		 System.out.println("Account type"+aobj.getCust_name());
+			 
+              if(aobj instanceof saving_account)
+              {
+            	  saving_account sobj=(saving_account)aobj;
+            	  {
+            		  System.out.println(" intrest"+sobj.getIntrest());
+            	  }
+            	  
+              }
+              if(aobj instanceof currents_account)
+              {
+            	  currents_account cobj=(currents_account)aobj;
+            	  {
+            		  System.out.println(" intrest"+cobj.getShop_name());
+            	  }
+            	  
+              }
+              
+		 
+		 
+	 }
+}
